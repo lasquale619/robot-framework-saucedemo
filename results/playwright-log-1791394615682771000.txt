@@ -1,0 +1,101 @@
+{"level":"info","time":"2026-10-07T17:36:56.617Z","seq":1,"component":"browser-library","msg":"Listening on 127.0.0.1:64835"}
+{"level":"info","time":"2026-10-07T17:36:56.866Z","seq":2,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:57.181Z","seq":3,"component":"browser-library","msg":"Adding browser to stack: chromium, version: 152.0.7977.83"}
+{"level":"info","time":"2026-10-07T17:36:57.182Z","seq":4,"component":"browser-library","msg":"Adding 0 contexts to browser"}
+{"level":"info","time":"2026-10-07T17:36:57.182Z","seq":5,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:57.198Z","seq":6,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:57.199Z","seq":7,"component":"browser-library","msg":"currentBrowser: {\"_contextStack\":[],\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@aaa9821c79e4506a5c3345aed3f114d0\"},\"name\":\"chromium\",\"id\":\"browser=83b5a4a7-4700-4902-a21c-89c62b70559b\",\"headless\":false}"}
+{"level":"info","time":"2026-10-07T17:36:57.231Z","seq":8,"component":"browser-library","msg":"Setting default timeout for context context=e5cc43c1-b80c-48dd-8e39-06534ba1e1a0 to 10000"}
+{"level":"info","time":"2026-10-07T17:36:57.231Z","seq":9,"component":"browser-library","msg":"Changed active context: context=e5cc43c1-b80c-48dd-8e39-06534ba1e1a0"}
+{"level":"info","time":"2026-10-07T17:36:57.541Z","seq":10,"component":"browser-library","msg":"Video path: undefined"}
+{"level":"info","time":"2026-10-07T17:36:57.541Z","seq":11,"component":"browser-library","msg":"Changed active page"}
+{"level":"info","time":"2026-10-07T17:36:57.758Z","seq":12,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:57.769Z","seq":13,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:57.769Z","seq":14,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=user-name in page."}
+{"level":"info","time":"2026-10-07T17:36:57.862Z","seq":15,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:57.867Z","seq":16,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:57.868Z","seq":17,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":"info","time":"2026-10-07T17:36:57.883Z","seq":18,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:57.890Z","seq":19,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:57.890Z","seq":20,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":"info","time":"2026-10-07T17:36:58.026Z","seq":21,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.030Z","seq":22,"component":"browser-library","event_kind":"grpc","action":"getText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.030Z","seq":23,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=[data-test=\"error\"] in page."}
+{"level":"info","time":"2026-10-07T17:36:58.030Z","seq":24,"component":"browser-library","msg":"Getting text content with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-10-07T17:36:58.030Z","seq":25,"component":"browser-library","msg":"Getting text content without text type"}
+{"level":"info","time":"2026-10-07T17:36:58.063Z","seq":26,"component":"browser-library","msg":"Locator was not an <input> or <textarea> element, falling back to innerText."}
+{"level":"info","time":"2026-10-07T17:36:58.066Z","seq":27,"component":"browser-library","msg":"Retrieved text for element css=[data-test=\"error\"] containing '[\"Epic sadface: Sorry, this user has been locked out.\"]' with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-10-07T17:36:58.066Z","seq":28,"component":"browser-library","event_kind":"grpc","action":"getText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.076Z","seq":29,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.076Z","seq":30,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=user-name in page."}
+{"level":"info","time":"2026-10-07T17:36:58.091Z","seq":31,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.097Z","seq":32,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.097Z","seq":33,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":"info","time":"2026-10-07T17:36:58.111Z","seq":34,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.115Z","seq":35,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.116Z","seq":36,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":"info","time":"2026-10-07T17:36:58.240Z","seq":37,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.244Z","seq":38,"component":"browser-library","event_kind":"grpc","action":"getText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.244Z","seq":39,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=[data-test=\"error\"] in page."}
+{"level":"info","time":"2026-10-07T17:36:58.244Z","seq":40,"component":"browser-library","msg":"Getting text content with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-10-07T17:36:58.244Z","seq":41,"component":"browser-library","msg":"Getting text content without text type"}
+{"level":"info","time":"2026-10-07T17:36:58.257Z","seq":42,"component":"browser-library","msg":"Locator was not an <input> or <textarea> element, falling back to innerText."}
+{"level":"info","time":"2026-10-07T17:36:58.261Z","seq":43,"component":"browser-library","msg":"Retrieved text for element css=[data-test=\"error\"] containing '[\"Epic sadface: Username and password do not match any user in this service\"]' with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-10-07T17:36:58.261Z","seq":44,"component":"browser-library","event_kind":"grpc","action":"getText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.267Z","seq":45,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.267Z","seq":46,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=user-name in page."}
+{"level":"info","time":"2026-10-07T17:36:58.290Z","seq":47,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.297Z","seq":48,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.297Z","seq":49,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":"info","time":"2026-10-07T17:36:58.313Z","seq":50,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.318Z","seq":51,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.318Z","seq":52,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":"info","time":"2026-10-07T17:36:58.368Z","seq":53,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.376Z","seq":54,"component":"browser-library","event_kind":"grpc","action":"getText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.376Z","seq":55,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=[data-test=\"error\"] in page."}
+{"level":"info","time":"2026-10-07T17:36:58.376Z","seq":56,"component":"browser-library","msg":"Getting text content with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-10-07T17:36:58.376Z","seq":57,"component":"browser-library","msg":"Getting text content without text type"}
+{"level":"info","time":"2026-10-07T17:36:58.389Z","seq":58,"component":"browser-library","msg":"Locator was not an <input> or <textarea> element, falling back to innerText."}
+{"level":"info","time":"2026-10-07T17:36:58.393Z","seq":59,"component":"browser-library","msg":"Retrieved text for element css=[data-test=\"error\"] containing '[\"Epic sadface: Username is required\"]' with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-10-07T17:36:58.393Z","seq":60,"component":"browser-library","event_kind":"grpc","action":"getText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.402Z","seq":61,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.402Z","seq":62,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=user-name in page."}
+{"level":"info","time":"2026-10-07T17:36:58.420Z","seq":63,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.430Z","seq":64,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.430Z","seq":65,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":"info","time":"2026-10-07T17:36:58.449Z","seq":66,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.454Z","seq":67,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.454Z","seq":68,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":"info","time":"2026-10-07T17:36:58.497Z","seq":69,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.501Z","seq":70,"component":"browser-library","event_kind":"grpc","action":"getText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.501Z","seq":71,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=[data-test=\"error\"] in page."}
+{"level":"info","time":"2026-10-07T17:36:58.501Z","seq":72,"component":"browser-library","msg":"Getting text content with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-10-07T17:36:58.501Z","seq":73,"component":"browser-library","msg":"Getting text content without text type"}
+{"level":"info","time":"2026-10-07T17:36:58.511Z","seq":74,"component":"browser-library","msg":"Locator was not an <input> or <textarea> element, falling back to innerText."}
+{"level":"info","time":"2026-10-07T17:36:58.515Z","seq":75,"component":"browser-library","msg":"Retrieved text for element css=[data-test=\"error\"] containing '[\"Epic sadface: Password is required\"]' with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-10-07T17:36:58.515Z","seq":76,"component":"browser-library","event_kind":"grpc","action":"getText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.521Z","seq":77,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.521Z","seq":78,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=user-name in page."}
+{"level":"info","time":"2026-10-07T17:36:58.533Z","seq":79,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.537Z","seq":80,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.537Z","seq":81,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":"info","time":"2026-10-07T17:36:58.549Z","seq":82,"component":"browser-library","event_kind":"grpc","action":"fillText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.552Z","seq":83,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.553Z","seq":84,"component":"browser-library","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":"info","time":"2026-10-07T17:36:58.599Z","seq":85,"component":"browser-library","event_kind":"grpc","action":"click","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.604Z","seq":86,"component":"browser-library","event_kind":"grpc","action":"getText","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.604Z","seq":87,"component":"browser-library","msg":"Strict mode is enabled, find Locator with css=[data-test=\"error\"] in page."}
+{"level":"info","time":"2026-10-07T17:36:58.604Z","seq":88,"component":"browser-library","msg":"Getting text content with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-10-07T17:36:58.604Z","seq":89,"component":"browser-library","msg":"Getting text content without text type"}
+{"level":"info","time":"2026-10-07T17:36:58.614Z","seq":90,"component":"browser-library","msg":"Locator was not an <input> or <textarea> element, falling back to innerText."}
+{"level":"info","time":"2026-10-07T17:36:58.616Z","seq":91,"component":"browser-library","msg":"Retrieved text for element css=[data-test=\"error\"] containing '[\"Epic sadface: Username is required\"]' with text type ROBOT_FRAMEWORK_BROWSER_NO_SET"}
+{"level":"info","time":"2026-10-07T17:36:58.616Z","seq":92,"component":"browser-library","event_kind":"grpc","action":"getText","status":"succeeded"}
+{"level":"info","time":"2026-10-07T17:36:58.622Z","seq":93,"component":"browser-library","event_kind":"grpc","action":"closeBrowser","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.632Z","seq":94,"component":"browser-library","msg":"Removed page=d1de89fd-2ebe-4e33-9233-596a7cc941bd from context=e5cc43c1-b80c-48dd-8e39-06534ba1e1a0 page stack"}
+{"level":"info","time":"2026-10-07T17:36:58.943Z","seq":95,"component":"browser-library","event_kind":"grpc","action":"closeBrowser","status":"succeeded"}
+{"level":"error","time":"2026-10-07T17:36:58.953Z","seq":96,"component":"browser-library","event_kind":"grpc_error","status":"failed","error_type":"Error","msg":"Error: No Browser is open but needed for this operation.\n    at PlaywrightState.getActiveBrowser (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js:14361:13)\n    at PlaywrightServer.getActiveBrowser (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js:15436:52)\n    at PlaywrightServer.setTimeout (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js:15667:56)\n    at Object.onReceiveHalfClose (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\@grpc\\grpc-js\\build\\src\\server.js:1479:25)\n    at BaseServerInterceptingCall.maybePushNextMessage (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\@grpc\\grpc-js\\build\\src\\server-interceptors.js:594:31)\n    at BaseServerInterceptingCall.handleEndEvent (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\@grpc\\grpc-js\\build\\src\\server-interceptors.js:634:14)\n    at ServerHttp2Stream.<anonymous> (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\@grpc\\grpc-js\\build\\src\\server-interceptors.js:387:18)\n    at ServerHttp2Stream.emit (node:events:520:35)\n    at endReadableNT (node:internal/streams/readable:1701:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)"}
+{"level":"info","time":"2026-10-07T17:36:58.959Z","seq":97,"suite_id":"s1-s1","suite_name":"Rb-Exo.Saucedemo","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.959Z","seq":98,"suite_id":"s1-s1","suite_name":"Rb-Exo.Saucedemo","component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
+{"level":"error","time":"2026-10-07T17:36:58.966Z","seq":99,"suite_id":"s1-s1","suite_name":"Rb-Exo.Saucedemo","component":"browser-library","event_kind":"grpc_error","status":"failed","error_type":"Error","msg":"Error: No Browser is open but needed for this operation.\n    at PlaywrightState.getActiveBrowser (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js:14361:13)\n    at PlaywrightServer.getActiveBrowser (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js:15436:52)\n    at PlaywrightServer.setTimeout (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js:15667:56)\n    at Object.onReceiveHalfClose (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\@grpc\\grpc-js\\build\\src\\server.js:1479:25)\n    at BaseServerInterceptingCall.maybePushNextMessage (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\@grpc\\grpc-js\\build\\src\\server-interceptors.js:594:31)\n    at BaseServerInterceptingCall.handleEndEvent (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\@grpc\\grpc-js\\build\\src\\server-interceptors.js:634:14)\n    at ServerHttp2Stream.<anonymous> (C:\\Users\\medbo\\Documents\\Projets\\Rb-Exo\\.venv\\Lib\\site-packages\\Browser\\wrapper\\node_modules\\@grpc\\grpc-js\\build\\src\\server-interceptors.js:387:18)\n    at ServerHttp2Stream.emit (node:events:520:35)\n    at endReadableNT (node:internal/streams/readable:1701:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)"}
+{"level":"info","time":"2026-10-07T17:36:58.969Z","seq":100,"component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"started"}
+{"level":"info","time":"2026-10-07T17:36:58.969Z","seq":101,"component":"browser-library","event_kind":"grpc","action":"getBrowserCatalog","status":"succeeded"}
