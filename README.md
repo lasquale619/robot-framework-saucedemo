@@ -8,6 +8,7 @@ Exercices d'apprentissage de **Robot Framework** avec **Browser Library** (Playw
 - [Node.js](https://nodejs.org) version LTS
 - Google Chrome (utilisé comme navigateur pour les tests)
 - [VS Code](https://code.visualstudio.com) avec l'extension **RobotCode** (recommandé)
+
 ## Installation
 
 ```powershell
@@ -58,6 +59,7 @@ Les résultats sont générés dans `log.html` (détail pas à pas, à ouvrir en
 - [x] 5 bis. Keyword générique de vérification du panier (listes et boucle `FOR`)
 - [x] 6. Tests data-driven avec `[Template]`
 - [ ] 7. Découper le projet en fichiers `.resource`
+
 ## Notions vues
 
 - Structure d'un fichier : Settings, Variables, Test Cases, Keywords
@@ -67,13 +69,15 @@ Les résultats sont générés dans `log.html` (détail pas à pas, à ouvrir en
 - Keywords utilisateur avec `[Arguments]` et `[Documentation]`
 - Listes (`@{}`, `Create List`, `VAR`), `Get Length`, boucles `FOR`
 - Tests data-driven avec `[Template]` et `${EMPTY}`
+
 ## Idées pour plus tard
 
 - Test avec des produits choisis aléatoirement (en enregistrant toujours les produits tirés dans le log)
 - Associer l'identifiant et le nom de chaque produit avec un dictionnaire (`&{}`)
+
 ## Comptes de test SauceDemo
 
 | Utilisateur | Mot de passe | Comportement |
-|---|---|---|
+| --- | --- | --- |
 | `standard_user` | `secret_sauce` | Connexion normale |
 | `locked_out_user` | `secret_sauce` | Compte bloqué |
