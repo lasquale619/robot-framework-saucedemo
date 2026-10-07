@@ -21,7 +21,7 @@ Connexion Réussie
     Get Text    css=.title    ==    Products
 
 Connexion Refusée
-    [Documentation]    Vérifie que les tentatives de connexion avec des informations d'identification incorrectes sont refusées.
+    [Documentation]    Vérifie que connexion avec des informations incorrectes sont Refusées.
     [Template]    Vérifier Connexion Refusée
     ${LOCKED_USER}    ${PASSWORD}    locked out
     ${USER}    wrong_password    do not match
