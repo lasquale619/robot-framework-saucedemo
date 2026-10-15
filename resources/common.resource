@@ -13,6 +13,6 @@ ${CHANNEL}        chrome
 
 *** Keywords ***
 Ouvrir Saucedemo
-    [Documentation]    Ouvre le site SauceDemo dans un navigateur Chrome.
+    [Documentation]    Ouvre le site SauceDemo dans le navigateur défini par ${CHANNEL}.
     New Browser    ${BROWSER}    channel=${CHANNEL}    headless=${HEADLESS}
     New Page    ${URL}
