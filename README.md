@@ -6,7 +6,7 @@ Exercices d'apprentissage de **Robot Framework** avec **Browser Library** (Playw
 
 - [Python](https://www.python.org/downloads/) (cocher "Add python.exe to PATH" à l'installation)
 - [Node.js](https://nodejs.org) version LTS
-- Google Chrome (utilisé comme navigateur pour les tests)
+- Google Chrome (navigateur par défaut des tests) ou Microsoft Edge
 - [VS Code](https://code.visualstudio.com) avec l'extension **RobotCode** (recommandé)
 
 ## Installation
@@ -20,7 +20,7 @@ pip install -r requirements.txt
 rfbrowser init --skip-browsers
 ```
 
-> `--skip-browsers` évite le téléchargement des navigateurs Playwright (bloqué sur certains réseaux d'entreprise à cause des certificats SSL). Les tests utilisent Chrome, déjà installé sur le PC, via `channel=chrome`.
+> `--skip-browsers` évite le téléchargement des navigateurs Playwright (bloqué sur certains réseaux d'entreprise à cause des certificats SSL). Les tests utilisent le navigateur déjà installé sur le PC, via l'option `channel`.
 
 ### Activation automatique du venv dans VS Code
 
@@ -29,25 +29,59 @@ Le fichier `.vscode/settings.json` du projet configure VS Code pour activer le v
 ## Lancer les tests
 
 ```powershell
-# Tous les tests d'un fichier
+# Tous les tests
 robot saucedemo.robot
 
 # Un seul test (guillemets doubles si le nom contient une apostrophe)
 robot --test "Passer Une Commande" saucedemo.robot
 
-# Plusieurs tests avec un joker
-robot --test "Connexion*" saucedemo.robot
+# Par tag
+robot --include smoke saucedemo.robot
+robot --exclude connexion saucedemo.robot
+
+# Sans afficher le navigateur
+robot -v HEADLESS:True saucedemo.robot
+
+# Avec Edge au lieu de Chrome
+robot -v CHANNEL:msedge saucedemo.robot
+
+# Ouvrir le rapport dans le navigateur
+start log.html
 ```
 
-Les résultats sont générés dans `log.html` (détail pas à pas, à ouvrir en cas d'échec) et `report.html` (synthèse).
+Les résultats sont générés dans `log.html` (détail pas à pas, à ouvrir en cas d'échec) et `report.html` (synthèse et statistiques par tag).
 
-## Contenu
+### Variables configurables
 
-| Fichier | Description |
+| Variable | Défaut | Rôle |
+|---|---|---|
+| `HEADLESS` | `False` | `True` pour lancer sans fenêtre de navigateur |
+| `CHANNEL` | `chrome` | Navigateur installé à utiliser (`chrome`, `msedge`) |
+
+### Tags disponibles
+
+| Tag | Tests concernés |
 |---|---|
-| `test_install.robot` | Vérifie que l'installation fonctionne |
-| `saucedemo.robot` | Exercices sur SauceDemo (connexion, panier, commande) |
-| `boucle.robot` | Entraînement sur les listes et les boucles `FOR`, sans navigateur |
+| `smoke` | Tests critiques, à lancer en priorité |
+| `connexion` | Tests de connexion |
+| `negatif` | Cas d'erreur |
+| `panier` | Ajout au panier |
+| `commande` | Parcours de commande |
+| `saucedemo` | Tous les tests du fichier |
+
+## Structure du projet
+
+```
+Rb-Exo/
+├── saucedemo.robot          ← les tests (scénarios uniquement)
+├── boucle.robot             ← entraînement listes et boucles FOR
+├── test_install.robot       ← vérification de l'installation
+└── resources/
+    ├── common.resource      ← Browser, variables, ouverture du site
+    ├── login.resource       ← keywords de la page de connexion
+    ├── panier.resource      ← ajout et vérification du panier
+    └── commande.resource    ← livraison et validation de la commande
+```
 
 ## Progression des exercices
 
@@ -58,7 +92,10 @@ Les résultats sont générés dans `log.html` (détail pas à pas, à ouvrir en
 - [x] 5. Parcours d'achat complet
 - [x] 5 bis. Keyword générique de vérification du panier (listes et boucle `FOR`)
 - [x] 6. Tests data-driven avec `[Template]`
-- [x] 7. Découper le projet en fichiers `.resource`
+- [x] 7. Découpage du projet en fichiers `.resource` par page
+- [x] 8. Tags
+- [x] 9. Variables en ligne de commande
+- [ ] 10. `Suite Setup` vs `Test Setup`
 
 ## Notions vues
 
@@ -69,6 +106,9 @@ Les résultats sont générés dans `log.html` (détail pas à pas, à ouvrir en
 - Keywords utilisateur avec `[Arguments]` et `[Documentation]`
 - Listes (`@{}`, `Create List`, `VAR`), `Get Length`, boucles `FOR`
 - Tests data-driven avec `[Template]` et `${EMPTY}`
+- Fichiers `.resource`, imports entre resources, organisation par page (Page Object)
+- Tags : `[Tags]`, `Test Tags`, `--include`, `--exclude`, `AND` / `OR`
+- Variables en ligne de commande : `-v NOM:valeur`
 
 ## Idées pour plus tard
 
@@ -78,6 +118,6 @@ Les résultats sont générés dans `log.html` (détail pas à pas, à ouvrir en
 ## Comptes de test SauceDemo
 
 | Utilisateur | Mot de passe | Comportement |
-| --- | --- | --- |
+|---|---|---|
 | `standard_user` | `secret_sauce` | Connexion normale |
 | `locked_out_user` | `secret_sauce` | Compte bloqué |
