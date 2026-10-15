@@ -58,7 +58,7 @@ Les résultats sont générés dans `log.html` (détail pas à pas, à ouvrir en
 - [x] 5. Parcours d'achat complet
 - [x] 5 bis. Keyword générique de vérification du panier (listes et boucle `FOR`)
 - [x] 6. Tests data-driven avec `[Template]`
-- [ ] 7. Découper le projet en fichiers `.resource`
+- [x] 7. Découper le projet en fichiers `.resource`
 
 ## Notions vues
 

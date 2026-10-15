@@ -1,21 +1,27 @@
 *** Settings ***
 Documentation    Tests de connexion et de panier sur SauceDemo.
+
 Resource         resources/common.resource
 Resource         resources/login.resource
 Resource         resources/panier.resource
 Resource         resources/commande.resource
+
 Test Setup       Ouvrir Saucedemo
 Test Teardown    Close Browser
+
+Test Tags        saucedemo
 
 
 *** Test Cases ***
 Connexion Réussie
     [Documentation]    Vérifie qu'un utilisateur valide peut se connecter avec succès.
+    [Tags]    connexion  Smoke
     Se Connecter    ${USER}    ${PASSWORD}
     Get Text    css=.title    ==    Products
 
 Connexion Refusée
     [Documentation]    Vérifie que les connexions avec des informations incorrectes sont refusées.
+    [Tags]    connexion  negative
     [Template]    Vérifier Connexion Refusée
     ${LOCKED_USER}    ${PASSWORD}    locked out
     ${USER}    wrong_password    do not match
@@ -25,6 +31,7 @@ Connexion Refusée
 
 Ajout d'un Produit Au Panier
     [Documentation]    Vérifie qu'un produit peut être ajouté au panier.
+    [Tags]    Panier
     Se Connecter    ${USER}    ${PASSWORD}
     Ajouter Au Panier    sauce-labs-backpack
     Get Text    data-test=shopping-cart-badge    ==    1
@@ -33,6 +40,7 @@ Ajout d'un Produit Au Panier
 
 Passer Une Commande
     [Documentation]    Vérifie que la commande peut être passée avec succès.
+    [Tags]    commande  Smoke
     Se Connecter    ${USER}    ${PASSWORD}
     Ajouter Au Panier    sauce-labs-backpack
     Ajouter Au Panier    sauce-labs-fleece-jacket
