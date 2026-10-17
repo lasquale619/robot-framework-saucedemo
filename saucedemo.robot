@@ -6,8 +6,10 @@ Resource         resources/login.resource
 Resource         resources/panier.resource
 Resource         resources/commande.resource
 
-Test Setup       Ouvrir Saucedemo
-Test Teardown    Close Browser
+Suite Setup       Ouvrir Le Navigateur
+Suite Teardown    Close Browser
+Test Setup        Ouvrir Saucedemo
+Test Teardown     Close Context
 
 Test Tags        saucedemo
 
