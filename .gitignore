@@ -3,5 +3,5 @@ output.xml
 log.html
 report.html
 browser/
-playwright-log.txt
+playwright-log*.txt
 __pycache__/

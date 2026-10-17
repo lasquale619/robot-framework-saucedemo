@@ -35,19 +35,19 @@ Ajout d'un Produit Au Panier
     [Documentation]    Vérifie qu'un produit peut être ajouté au panier.
     [Tags]    Panier
     Se Connecter    ${USER}    ${PASSWORD}
-    Ajouter Au Panier    sauce-labs-backpack
+    Ajouter Au Panier    ${SAC}
     Get Text    data-test=shopping-cart-badge    ==    1
     Ouvrir Le Panier
-    Get Text    data-test=item-4-title-link    ==    Sauce Labs Backpack
+    Get Text    data-test=item-4-title-link    ==    ${SAC}[name]
 
 Passer Une Commande
     [Documentation]    Vérifie que la commande peut être passée avec succès.
     [Tags]    commande  Smoke
     Se Connecter    ${USER}    ${PASSWORD}
-    Ajouter Au Panier    sauce-labs-backpack
-    Ajouter Au Panier    sauce-labs-fleece-jacket
+    Ajouter Au Panier    ${SAC}
+    Ajouter Au Panier    ${VESTE}
     Get Text    data-test=shopping-cart-badge    ==    2
-    VAR    @{produits}    Sauce Labs Backpack    Sauce Labs Fleece Jacket
+    VAR    @{produits}    ${SAC}    ${VESTE}
     Vérifier Le Panier Contient    ${produits}
     Click    id=checkout
     Remplir Les Informations De Livraison    John    Doe    12345

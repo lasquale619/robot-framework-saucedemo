@@ -62,12 +62,39 @@ Les résultats sont générés dans `log.html` (détail pas à pas, à ouvrir en
 
 | Tag | Tests concernés |
 |---|---|
-| `smoke` | Tests critiques, à lancer en priorité |
+| `smoke` | Tests critiques, à lancer en priorité (connexion réussie, commande) |
 | `connexion` | Tests de connexion |
-| `negatif` | Cas d'erreur |
+| `negative` | Cas d'erreur |
 | `panier` | Ajout au panier |
 | `commande` | Parcours de commande |
 | `saucedemo` | Tous les tests du fichier |
+
+## Cycle de vie du navigateur
+
+Les tests suivent le modèle recommandé avec Browser Library :
+
+| Moment | Action | Pourquoi |
+|---|---|---|
+| `Suite Setup` | Ouvrir le navigateur (`New Browser`) | Une seule fois : c'est l'étape lente |
+| `Test Setup` | Nouveau contexte + page (`New Context`, `New Page`) | Session vierge pour chaque test |
+| `Test Teardown` | Fermer le contexte (`Close Context`) | Nettoyage après chaque test |
+| `Suite Teardown` | Fermer le navigateur (`Close Browser`) | Une seule fois, à la fin |
+
+Chaque test démarre ainsi déconnecté, avec un panier vide : les tests sont **indépendants** et peuvent s'exécuter seuls, dans n'importe quel ordre.
+
+## Données de test
+
+Chaque produit est décrit **une seule fois**, sous forme de dictionnaire, dans `resources/panier.resource` :
+
+```robotframework
+&{SAC}      id=sauce-labs-backpack         name=Sauce Labs Backpack
+&{VESTE}    id=sauce-labs-fleece-jacket    name=Sauce Labs Fleece Jacket
+```
+
+- `id` sert à construire le locator du bouton d'ajout (`add-to-cart-<id>`)
+- `name` sert à vérifier le produit dans le panier
+
+Les keywords reçoivent la fiche complète du produit (`Ajouter Au Panier    ${SAC}`) et y lisent l'information dont ils ont besoin. Si le site renomme un produit, une seule ligne est à modifier.
 
 ## Structure du projet
 
@@ -75,11 +102,12 @@ Les résultats sont générés dans `log.html` (détail pas à pas, à ouvrir en
 Rb-Exo/
 ├── saucedemo.robot          ← les tests (scénarios uniquement)
 ├── boucle.robot             ← entraînement listes et boucles FOR
+├── dictionnaire.robot       ← entraînement dictionnaires
 ├── test_install.robot       ← vérification de l'installation
 └── resources/
-    ├── common.resource      ← Browser, variables, ouverture du site
+    ├── common.resource      ← Browser, variables, ouverture du navigateur et du site
     ├── login.resource       ← keywords de la page de connexion
-    ├── panier.resource      ← ajout et vérification du panier
+    ├── panier.resource      ← produits, ajout et vérification du panier
     └── commande.resource    ← livraison et validation de la commande
 ```
 
@@ -95,7 +123,8 @@ Rb-Exo/
 - [x] 7. Découpage du projet en fichiers `.resource` par page
 - [x] 8. Tags
 - [x] 9. Variables en ligne de commande
-- [ ] 10. `Suite Setup` vs `Test Setup`
+- [x] 10. `Suite Setup` vs `Test Setup`
+- [x] 11. Dictionnaires (`&{}`)
 
 ## Notions vues
 
@@ -109,11 +138,12 @@ Rb-Exo/
 - Fichiers `.resource`, imports entre resources, organisation par page (Page Object)
 - Tags : `[Tags]`, `Test Tags`, `--include`, `--exclude`, `AND` / `OR`
 - Variables en ligne de commande : `-v NOM:valeur`
+- `Suite Setup` / `Suite Teardown`, hiérarchie Browser / Context / Page, indépendance des tests
+- Dictionnaires : `&{}`, lecture avec `${dict}[clé]`, une seule source de vérité pour les données
 
 ## Idées pour plus tard
 
 - Test avec des produits choisis aléatoirement (en enregistrant toujours les produits tirés dans le log)
-- Associer l'identifiant et le nom de chaque produit avec un dictionnaire (`&{}`)
 
 ## Comptes de test SauceDemo
 
