@@ -1,6 +1,12 @@
-# Rb-Exo
+# Robot Framework — SauceDemo
 
-Exercices d'apprentissage de **Robot Framework** avec **Browser Library** (Playwright), sur le site de démo [SauceDemo](https://www.saucedemo.com).
+[![Robot Framework Tests](https://github.com/lasquale619/Rb-Exo/actions/workflows/robot.yml/badge.svg)](https://github.com/lasquale619/Rb-Exo/actions/workflows/robot.yml)
+![Robot Framework](https://img.shields.io/badge/Robot%20Framework-7.5-000000?logo=robotframework&logoColor=white)
+![Browser Library](https://img.shields.io/badge/Browser%20Library-Playwright-2EAD33?logo=playwright&logoColor=white)
+
+Automatisation des tests du site de démo [SauceDemo](https://www.saucedemo.com) avec **Robot Framework** et **Browser Library** (Playwright), construite exercice par exercice.
+
+Les tests couvrent la connexion (réussie et refusée, en data-driven), l'ajout au panier et le parcours de commande complet. Ils sont organisés par page dans des fichiers `.resource`, filtrables par tags et exécutés à chaque push par GitHub Actions (rapport `log.html` / `report.html` disponible dans les artefacts du run).
 
 ## Prérequis
 
@@ -101,9 +107,8 @@ Les keywords reçoivent la fiche complète du produit (`Ajouter Au Panier    ${S
 ```
 Rb-Exo/
 ├── saucedemo.robot          ← les tests (scénarios uniquement)
-├── boucle.robot             ← entraînement listes et boucles FOR
-├── dictionnaire.robot       ← entraînement dictionnaires
 ├── test_install.robot       ← vérification de l'installation
+├── .github/workflows/       ← exécution des tests sur GitHub Actions
 └── resources/
     ├── common.resource      ← Browser, variables, ouverture du navigateur et du site
     ├── login.resource       ← keywords de la page de connexion
