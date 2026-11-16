@@ -1,6 +1,6 @@
 # Robot Framework — SauceDemo
 
-[![Robot Framework Tests](https://github.com/lasquale619/Rb-Exo/actions/workflows/robot.yml/badge.svg)](https://github.com/lasquale619/Rb-Exo/actions/workflows/robot.yml)
+[![Robot Framework Tests](https://github.com/lasquale619/robot-framework-saucedemo/actions/workflows/robot.yml/badge.svg)](https://github.com/lasquale619/robot-framework-saucedemo/actions/workflows/robot.yml)
 ![Robot Framework](https://img.shields.io/badge/Robot%20Framework-7.5-000000?logo=robotframework&logoColor=white)
 ![Browser Library](https://img.shields.io/badge/Browser%20Library-Playwright-2EAD33?logo=playwright&logoColor=white)
 
@@ -18,8 +18,8 @@ Les tests couvrent la connexion (réussie et refusée, en data-driven), l'ajout 
 ## Installation
 
 ```powershell
-git clone https://github.com/lasquale619/Rb-Exo.git
-cd Rb-Exo
+git clone https://github.com/lasquale619/robot-framework-saucedemo.git
+cd robot-framework-saucedemo
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
@@ -30,7 +30,7 @@ rfbrowser init --skip-browsers
 
 ### Activation automatique du venv dans VS Code
 
-Le fichier `.vscode/settings.json` du projet configure VS Code pour activer le venv automatiquement à chaque ouverture de terminal. Il suffit d'ouvrir le dossier `Rb-Exo` dans VS Code : `(.venv)` doit apparaître au début de la ligne de commande.
+Le fichier `.vscode/settings.json` du projet configure VS Code pour activer le venv automatiquement à chaque ouverture de terminal. Il suffit d'ouvrir le dossier `robot-framework-saucedemo` dans VS Code : `(.venv)` doit apparaître au début de la ligne de commande.
 
 ## Lancer les tests
 
@@ -105,7 +105,7 @@ Les keywords reçoivent la fiche complète du produit (`Ajouter Au Panier    ${S
 ## Structure du projet
 
 ```
-Rb-Exo/
+robot-framework-saucedemo/
 ├── saucedemo.robot          ← les tests (scénarios uniquement)
 ├── test_install.robot       ← vérification de l'installation
 ├── .github/workflows/       ← exécution des tests sur GitHub Actions
